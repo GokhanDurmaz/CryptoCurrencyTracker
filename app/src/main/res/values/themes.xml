@@ -1,0 +1,43 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.CryptoCurrencyTracker.Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorPrimaryVariant">#F0F0F0</item>
+        <item name="colorAccent">#161b2f</item>
+        <item name="appBarColor">#FFFFFF</item>
+        <item name="backgroundColor">#FFFFFF</item>
+        <item name="cardBackgroundColor">#F0F0F0</item>
+        <item name="navigationViewColor">#FFFFFF</item>
+        <item name="layoutColorLight">#F0F0F0</item>
+        <item name="layoutColorDark">#AAF0F0F0</item>
+        <item name="textColorAccent">#161b2f</item>
+        <item name="textColorAccentLight">#333850</item>
+        <item name="tintColor">#161b2f</item>
+        <item name="buttonColor">#161b2f</item>
+
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.CryptoCurrencyTracker.Dark" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorPrimaryVariant">#F0F0F0</item>
+        <item name="colorAccent">#161b2f</item>
+        <item name="appBarColor">#161b2f</item>
+        <item name="backgroundColor">#161b2f</item>
+        <item name="cardBackgroundColor">#161b2f</item>
+        <item name="navigationViewColor">#161b2f</item>
+        <item name="layoutColorLight">#333850</item>
+        <item name="layoutColorDark">#161b2f</item>
+        <item name="textColorAccent">#F0F0F0</item>
+        <item name="textColorAccentLight">#FFFFFF</item>
+        <item name="tintColor">#F0F0F0</item>
+        <item name="buttonColor">#F0F0F0</item>
+    </style>
+
+    <style name="Theme.SwitchCompat" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlActivated">#F0F0F0</item>
+        <item name="colorSwitchThumbNormal">#161b2f</item>
+        <item name="android:colorForeground">#88161b2f</item>
+    </style>
+</resources>

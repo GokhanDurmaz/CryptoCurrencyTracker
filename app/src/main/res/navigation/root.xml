@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.cryptocurrencytracker.demo.ui.fragment.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_mainFragment_to_navigationMain"
+            app:destination="@id/navigationMain" />
+        <action
+            android:id="@+id/action_mainFragment_to_coinDetail"
+            app:destination="@id/coinDetail" />
+        <action
+            android:id="@+id/action_mainFragment_to_coinFavorite"
+            app:destination="@id/coinFavorite" />
+        <action
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/coinDetail"
+        android:name="com.cryptocurrencytracker.demo.ui.fragment.CoinDetailFragment"
+        tools:label="CoinDetailFragment"
+        tools:layout="@layout/fragment_coin_detail"/>
+
+    <fragment
+        android:id="@+id/coinFavorite"
+        android:name="com.cryptocurrencytracker.demo.ui.fragment.CoinFavoriteFragment"
+        android:label="CoinFavoriteFragment"
+        tools:layout="@layout/fragment_coin_favorite"/>
+
+    <navigation
+        android:id="@+id/navigationMain"
+        app:startDestination="@id/mainActivity">
+
+        <activity
+            android:id="@+id/mainActivity"
+            android:name="com.cryptocurrencytracker.demo.ui.activity.MainActivity"
+            android:label="MainActivity"
+            tools:layout="@layout/activity_main" />
+    </navigation>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.cryptocurrencytracker.demo.ui.fragment.SettingsFragment"
+        android:label="SettingsFragment" />
+
+</navigation>

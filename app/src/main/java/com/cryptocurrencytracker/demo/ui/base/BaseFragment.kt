@@ -1,0 +1,28 @@
+package com.cryptocurrencytracker.demo.ui.base
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.viewbinding.ViewBinding
+import dagger.android.support.DaggerFragment
+
+/**
+ * Created by gokhan on 2/6/21.
+ */
+
+abstract class BaseFragment<VB: ViewBinding>: DaggerFragment() {
+
+    lateinit var fragmentBinding: VB
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        fragmentBinding = getFragmentViewBinding()
+        return fragmentBinding.root
+    }
+
+    abstract fun getFragmentViewBinding(): VB
+}
