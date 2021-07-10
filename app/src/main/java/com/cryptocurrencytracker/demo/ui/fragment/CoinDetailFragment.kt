@@ -14,13 +14,11 @@ import com.cryptocurrencytracker.demo.data.db.currency.coin.detail.CoinsDetail
 import com.cryptocurrencytracker.demo.databinding.FragmentCoinDetailBinding
 import com.cryptocurrencytracker.demo.helper.CoinsDataHandler
 import com.cryptocurrencytracker.demo.helper.CryptoCurrencyDataHandler
-import com.cryptocurrencytracker.demo.helper.MIME_TYPE
 import com.cryptocurrencytracker.demo.helper.ENCODING
+import com.cryptocurrencytracker.demo.helper.MIME_TYPE
 import com.cryptocurrencytracker.demo.helper.ui.loadImage
 import com.cryptocurrencytracker.demo.ui.CryptoCurrencyTrackerVm
 import com.cryptocurrencytracker.demo.ui.base.BaseFragment
-import com.cryptocurrencytracker.demo.ui.view.CoinFloatInformationView
-import java.lang.StringBuilder
 import javax.inject.Inject
 
 class CoinDetailFragment : BaseFragment<FragmentCoinDetailBinding>() {
@@ -37,7 +35,6 @@ class CoinDetailFragment : BaseFragment<FragmentCoinDetailBinding>() {
     }
 
     override fun onStop() {
-        removeCoinInformationFloat()
         super.onStop()
     }
 
@@ -50,9 +47,6 @@ class CoinDetailFragment : BaseFragment<FragmentCoinDetailBinding>() {
             viewLifecycleOwner,
             Observer(::coinDataHandler)
         )
-        activity?.let { fragmentActivity ->
-            CoinFloatInformationView(null, fragmentActivity, null, 0).addView()
-        }
     }
 
     private fun currencyDataHandler(currencyData: CurrencyData) {
@@ -115,9 +109,5 @@ class CoinDetailFragment : BaseFragment<FragmentCoinDetailBinding>() {
                 setTextColor(ContextCompat.getColor(context, R.color.colorLightRed))
             text = StringBuilder("${coinsDetail.market_data.price_change_24h_in_currency.`try`}")
         }
-    }
-
-    private fun removeCoinInformationFloat() = activity?.let { fragmentActivity ->
-        CoinFloatInformationView(null, fragmentActivity, null, 0).removeView()
     }
 }
